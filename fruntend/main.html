@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHINIGAMI MD</title>
+  <title>DARK DEV MINI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600&display=swap');
@@ -36,7 +36,6 @@
       position: relative;
     }
     
-    /* Effets d'arrière-plan féminin futuriste */
     body::before {
       content: '';
       position: absolute;
@@ -50,7 +49,6 @@
       z-index: -2;
     }
     
-    /* Grille futuriste en arrière-plan */
     .grid {
       position: absolute;
       top: 0;
@@ -316,6 +314,26 @@
       100% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0); }
     }
     
+    .footer {
+      margin-top: 25px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .footer span {
+      color: var(--primary);
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(255, 107, 157, 0.4);
+    }
+
+    .box:hover .footer {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
     .floral-decoration {
       position: absolute;
       width: 100%;
@@ -359,7 +377,6 @@
       }
     }
     
-    /* Effets de particules féminines futuristes */
     .particles {
       position: absolute;
       top: 0;
@@ -394,23 +411,28 @@
       <div class="box" id="box">
         <div class="logo">
           <div class="logo-icon">
-            <img src="https://files.catbox.moe/ekfozx.png" alt="SHINIGAMI MD">
+            <img src="https://files.catbox.moe/ekfozx.png" alt="DARK DEV MINI">
           </div>
-          <div class="logo-text">SHINIGAMI PAIR</div>
+          <div class="logo-text">DARK DEV MINI PAIR</div>
         </div>
         
         <div id="text">
-          <p>
+          <div>
             <h3 class="centered-text">∞ Link with phone number ∞</h3>
             <h6>🌙 Enter Your Number With Country Code 🌙</h6>
             <div class="input-container">
-              <input placeholder="+55xxxxxxxx" type="tel" id="number" name="number">
+              <input placeholder="+94xxxxxxxx" type="tel" id="number" name="number">
               <button id="submit">enter</button>
             </div>
            
             <a id="waiting-message" class="centered-text" style="display: none;">Processing...</a>
+            
             <main id="pair"></main>
-          </p>
+          </div>
+        </div>
+
+        <div class="footer">
+          Developed by <span>fixo dev</span>
         </div>
       </div>
     </div>
@@ -424,7 +446,6 @@
     let box = document.getElementById("box");
     let waitingMessage = document.getElementById("waiting-message");
 
-    // Create background particles
     function createParticles() {
       const particlesContainer = document.getElementById('particles');
       const particleCount = 30;
@@ -451,7 +472,6 @@
       }
     }
     
-    // Create floral decorations
     function createFloralDecorations() {
       const floralContainer = document.getElementById('floral-decoration');
       const floralCount = 8;
@@ -542,4 +562,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
